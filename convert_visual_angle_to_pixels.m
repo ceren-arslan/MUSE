@@ -16,16 +16,16 @@ size_in_px = size_in_deg / deg_per_px;
 
 
 %%% superimpose images to create a mask %%%
-addpath('C:/Users/arslan/Documents/piheycdi/MUSE/gabors/gabors_4/');
-image_path = 'C:/Users/arslan/Documents/piheycdi/MUSE/gabors/gabors_4/';
-gabor_1 = imread('gabor-gaussian-11.25-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_2 = imread('gabor-gaussian-33.75-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_3 = imread('gabor-gaussian-56.25-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_4 = imread('gabor-gaussian-78.75-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_5 = imread('gabor-gaussian-101.25-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_6 = imread('gabor-gaussian-123.75-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_7 = imread('gabor-gaussian-146.25-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_8 = imread('gabor-gaussian-168.75-236-50.00-0.05-180.00-128-128-128-255-255-255-0-0-0.png');
+addpath('C:/Users/arslan/Documents/piheycdi/MUSE/gabors/gabors_3/');
+image_path = 'C:/Users/arslan/Documents/piheycdi/MUSE/gabors/gabors_3/';
+gabor_1 = imread('gabor-11.25.png');
+gabor_2 = imread('gabor-33.75.png');
+gabor_3 = imread('gabor-56.25.png');
+gabor_4 = imread('gabor-78.75.png');
+gabor_5 = imread('gabor-101.25.png');
+gabor_6 = imread('gabor-123.75.png');
+gabor_7 = imread('gabor-146.25.png');
+gabor_8 = imread('gabor-168.75.png');
 
 
 % if you simply take the average of all the images, then you end up with equal weights
@@ -36,3 +36,9 @@ outpict = cat(8,gabor_1,gabor_2,gabor_3,gabor_4,gabor_5,gabor_6,gabor_7,gabor_8)
 outpict = cast(mean(outpict,8),class(gabor_1));
 % each image has a weight of 0.12
 imshow(outpict)
+
+%%
+
+grayImage = zeros(236,236, 'uint8');
+imshow(grayImage, []);
+
