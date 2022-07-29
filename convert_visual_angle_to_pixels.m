@@ -42,3 +42,29 @@ imshow(outpict)
 grayImage = zeros(236,236, 'uint8');
 imshow(grayImage, []);
 
+%%
+
+% Rotate image
+addpath('C:/Users/arslan/Documents/piheycdi/MUSE/teardrops/');
+image_path = 'C:/Users/arslan/Documents/piheycdi/MUSE/teardrops/';
+teardrop_old = imread('image001.png');
+
+%imshow(teardrop_old)
+
+teardrop_1 = imrotate(teardrop_old,-45,"bilinear");
+teardrop_2 = imrotate(teardrop_old,-90,"bilinear");
+teardrop_3 = imrotate(teardrop_old,-135,"bilinear");
+teardrop_4 = imrotate(teardrop_old,-180,"bilinear");
+teardrop_5 = imrotate(teardrop_old,-225,"bilinear");
+teardrop_6 = imrotate(teardrop_old,-270,"bilinear");
+teardrop_7 = imrotate(teardrop_old,-315,"bilinear");
+teardrop_8 = imrotate(teardrop_old,-360,"bilinear");
+imshow(teardrop_8)
+
+
+%%
+%resize images?
+img_to_resize = imread("Gi-Yeul\newest\original\image_180.png");
+magnificationFactor = 1.25;
+J = imresize(img_to_resize,magnificationFactor);
+imshow(J)

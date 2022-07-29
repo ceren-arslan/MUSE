@@ -18,14 +18,14 @@ size_in_px = size_in_deg / deg_per_px;
 %%% superimpose images to create a mask %%%
 addpath('C:/Users/arslan/Documents/piheycdi/MUSE/gabors/gabors_3/');
 image_path = 'C:/Users/arslan/Documents/piheycdi/MUSE/gabors/gabors_3/';
-gabor_1 = imread('gabor-gaussian-11.25-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_2 = imread('gabor-gaussian-33.75-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_3 = imread('gabor-gaussian-56.25-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_4 = imread('gabor-gaussian-78.75-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_5 = imread('gabor-gaussian-101.25-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_6 = imread('gabor-gaussian-123.75-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_7 = imread('gabor-gaussian-146.25-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
-gabor_8 = imread('gabor-gaussian-168.75-236-50.00-0.03-180.00-128-128-128-255-255-255-0-0-0.png');
+gabor_1 = imread('gabor-11.25.png');
+gabor_2 = imread('gabor-33.75.png');
+gabor_3 = imread('gabor-56.25.png');
+gabor_4 = imread('gabor-78.75.png');
+gabor_5 = imread('gabor-101.25.png');
+gabor_6 = imread('gabor-123.75.png');
+gabor_7 = imread('gabor-146.25.png');
+gabor_8 = imread('gabor-168.75.png');
 
 
 % if you simply take the average of all the images, then you end up with equal weights
@@ -36,3 +36,35 @@ outpict = cat(8,gabor_1,gabor_2,gabor_3,gabor_4,gabor_5,gabor_6,gabor_7,gabor_8)
 outpict = cast(mean(outpict,8),class(gabor_1));
 % each image has a weight of 0.12
 imshow(outpict)
+
+%%
+
+grayImage = zeros(236,236, 'uint8');
+imshow(grayImage, []);
+
+%%
+
+% Rotate image
+addpath('C:/Users/arslan/Documents/piheycdi/MUSE/teardrops/');
+image_path = 'C:/Users/arslan/Documents/piheycdi/MUSE/teardrops/';
+teardrop_old = imread('image001.png');
+
+%imshow(teardrop_old)
+
+%teardrop_1 = imrotate(teardrop_old,-45,"bilinear");
+%teardrop_2 = imrotate(teardrop_old,-90,"bilinear");
+%teardrop_3 = imrotate(teardrop_old,-135,"bilinear");
+%teardrop_4 = imrotate(teardrop_old,-180,"bilinear");
+%teardrop_5 = imrotate(teardrop_old,-225,"bilinear");
+%teardrop_6 = imrotate(teardrop_old,-270,"bilinear");
+%teardrop_7 = imrotate(teardrop_old,-315,"bilinear");
+teardrop_8 = imrotate(teardrop_old,-360,"bilinear");
+imshow(teardrop_8)
+%figure
+%imshowpair(teardrop_old, teardrop_6)
+
+
+
+%%
+image_new = imread()
+
